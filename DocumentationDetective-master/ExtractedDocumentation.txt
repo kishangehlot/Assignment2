@@ -1,0 +1,156 @@
+All classes in the package 'models': 
+models.EatSure
+models.Swiggy
+models.Zomato
+
+Classes annotated with '@ClassDocumentation': 
+models.EatSure
+models.Swiggy
+
+Methods annotated with '@MethodDocumentation': 
+public int models.Swiggy.getNumOfSwiggyOrders()
+public int models.Zomato.getNumOfZomatoOrders()
+public int models.Zomato.placeZomatoOrder(java.lang.String)
+public int models.Swiggy.placeSwiggyOrder(java.lang.String)
+public void models.EatSure.searchWithCamera(java.lang.String)
+public int models.EatSure.getNumOfEatSureOrders()
+public int models.EatSure.placeMyntraOrder(java.lang.String)
+
+Classes not annotated with '@ClassDocumentation' but have documentation: 
+package models;
+
+import annotations.ClassDocumentation;
+import annotations.MethodDocumentation;
+
+/**
+ * This class is for EatSure Shopping App
+ */
+@ClassDocumentation
+public class EatSure {
+    int orders;
+
+    public EatSure(int orders) {
+        this.orders = orders;
+    }
+
+    @MethodDocumentation
+    public int getNumOfEatSureOrders() {
+        return this.orders;
+    }
+
+    @MethodDocumentation(documentation = "This method places an order on the EatSure App")
+    public int placeMyntraOrder(String orderName) {
+        System.out.println("Placing your EatSure order" + orderName);
+        return ++orders;
+    }
+
+    /**
+     * This method searches the EatSure databases for products that match your item
+     * @param photo
+     */
+    @MethodDocumentation(documentation = "This method scans a photo to find matching items from the EatSure")
+    public void searchWithCamera(String photo) {
+        System.out.println("Trying to search our database for products that match your item");
+    }
+}
+
+package models;
+
+import annotations.ClassDocumentation;
+import annotations.MethodDocumentation;
+
+/**
+ * This class is for Swiggy Shopping App
+ */
+@ClassDocumentation
+public class Swiggy {
+    int orders;
+
+    public Swiggy(int orders) {
+        this.orders = orders;
+    }
+
+    /**
+     * This method returns the number of orders thet Swiggy shopping app has received yet
+     * @return number of orders
+     */
+    @MethodDocumentation
+    public int getNumOfSwiggyOrders() {
+        return this.orders;
+    }
+
+    /**
+     * This method places an order on the Swiggy App
+     * @param orderName
+     * @return total orders
+     */
+    @MethodDocumentation
+    public int placeSwiggyOrder(String orderName) {
+        System.out.println("Placing your Swiggy order" + orderName);
+
+        return ++orders;
+    }
+
+}
+
+
+package models;
+
+/**
+ * This class is for Zomato app
+ */
+public class Zomato {
+    int orders;
+
+
+    public Zomato(int orders) {
+        this.orders = orders;
+    }
+
+    /**
+     *
+     * @returns the number of orders on Zomato App
+     */
+    @annotations.MethodDocumentation
+    public int getNumOfZomatoOrders() {
+        return this.orders;
+    }
+
+    /**
+     *
+     * @param orderName
+     * @return total after placing an order on Zomato
+     */
+    @annotations.MethodDocumentation
+    public int placeZomatoOrder(String orderName) {
+        System.out.println("Placing your Zomato order");
+
+        return ++orders;
+    }
+
+    /**
+     *
+     * @param groceries
+     */
+    public void buyGroceries(String[] groceries) {
+        System.out.println("You're about to buy" + groceries.length);
+    }
+}
+
+Class: Zomato
+JavaDoc: 
+ * This class is for Zomato app
+ 
+
+Classes annotated with '@ClassDocumentation' but have no javadoc: 
+models.EatSure
+models.Swiggy
+
+Methods not annotated with '@MethodDocumentation' but have javadoc: 
+{models.Zomato.buyGroceries=
+@param groceries
+}
+
+Methods annotated with '@MethodDocumentation' but have no javadoc: 
+[models.EatSure.getNumOfEatSureOrders, models.EatSure.placeMyntraOrder]
+
